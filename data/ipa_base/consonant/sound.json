@@ -1,0 +1,2513 @@
+[
+  {
+    "form": "consonant",
+    "symbol": "m̥",
+    "slug": "voiceless-bilabial-nasal",
+    "place": "bilabial",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/m̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "m",
+    "slug": "voiced-bilabial-nasal",
+    "place": "bilabial",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/m.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɱ̊",
+    "slug": "voiceless-labiodental-nasal",
+    "place": "labiodental",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/ɱ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɱ",
+    "slug": "voiced-labiodental-nasal",
+    "place": "labiodental",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ɱ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̼",
+    "slug": "voiced-linguolabial-nasal",
+    "place": "linguolabial",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/n̼.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̪̊",
+    "slug": "voiceless-dental-nasal",
+    "place": "dental",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̪",
+    "slug": "voiced-dental-nasal",
+    "place": "dental",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/n̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̥",
+    "slug": "voiceless-alveolar-nasal",
+    "place": "alveolar",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/n̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "n",
+    "slug": "voiced-alveolar-nasal",
+    "place": "alveolar",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/n.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̠̊",
+    "slug": "voiceless-postalveolar-nasal",
+    "place": "postalveolar",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "n̠",
+    "slug": "voiced-postalveolar-nasal",
+    "place": "postalveolar",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/n̠.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɳ̊",
+    "slug": "voiceless-retroflex-nasal",
+    "place": "retroflex",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/ɳ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɳ",
+    "slug": "voiced-retroflex-nasal",
+    "place": "retroflex",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ɳ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɲ̊",
+    "slug": "voiceless-palatal-nasal",
+    "place": "palatal",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/ɲ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɲ",
+    "slug": "voiced-palatal-nasal",
+    "place": "palatal",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ɲ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋ̊",
+    "slug": "voiceless-velar-nasal",
+    "place": "velar",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/ŋ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋ",
+    "slug": "voiced-velar-nasal",
+    "place": "velar",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ŋ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɴ̥",
+    "slug": "voiceless-uvular-nasal",
+    "place": "uvular",
+    "manner": "nasal",
+    "voicing": "voiceless",
+    "audio": "audio/ɴ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɴ",
+    "slug": "voiced-uvular-nasal",
+    "place": "uvular",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ɴ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "p",
+    "slug": "voiceless-bilabial-plosive",
+    "place": "bilabial",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/p.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "b",
+    "slug": "voiced-bilabial-plosive",
+    "place": "bilabial",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/b.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "p̪",
+    "slug": "voiceless-labiodental-plosive",
+    "place": "labiodental",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/p̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "b̪",
+    "slug": "voiced-labiodental-plosive",
+    "place": "labiodental",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/b̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̼",
+    "slug": "voiceless-linguolabial-plosive",
+    "place": "linguolabial",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/t̼.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̼",
+    "slug": "voiced-linguolabial-plosive",
+    "place": "linguolabial",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/d̼.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̪",
+    "slug": "voiceless-dental-plosive",
+    "place": "dental",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/t̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̪",
+    "slug": "voiced-dental-plosive",
+    "place": "dental",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/d̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t",
+    "slug": "voiceless-alveolar-plosive",
+    "place": "alveolar",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/t.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d",
+    "slug": "voiced-alveolar-plosive",
+    "place": "alveolar",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/d.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʈ",
+    "slug": "voiceless-retroflex-plosive",
+    "place": "retroflex",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/ʈ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɖ",
+    "slug": "voiced-retroflex-plosive",
+    "place": "retroflex",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ɖ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "c",
+    "slug": "voiceless-palatal-plosive",
+    "place": "palatal",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/c.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɟ",
+    "slug": "voiced-palatal-plosive",
+    "place": "palatal",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ɟ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k",
+    "slug": "voiceless-velar-plosive",
+    "place": "velar",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/k.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡ",
+    "slug": "voiced-velar-plosive",
+    "place": "velar",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ɡ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "q",
+    "slug": "voiceless-uvular-plosive",
+    "place": "uvular",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/q.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɢ",
+    "slug": "voiced-uvular-plosive",
+    "place": "uvular",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ɢ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʡ",
+    "slug": "voiceless-pharyngeal-epiglottal-plosive",
+    "place": "pharyngeal/epiglottal",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/ʡ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʔ",
+    "slug": "voiced-glottal-plosive",
+    "place": "glottal",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ʔ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̪s̪",
+    "slug": "voiceless-dental-sibilant-affricate",
+    "place": "dental",
+    "manner": "sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̪s̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̪z̪",
+    "slug": "voiced-dental-sibilant-affricate",
+    "place": "dental",
+    "manner": "sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/d̪z̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ts",
+    "slug": "voiceless-alveolar-sibilant-affricate",
+    "place": "alveolar",
+    "manner": "sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/ts.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "dz",
+    "slug": "voiced-alveolar-sibilant-affricate",
+    "place": "alveolar",
+    "manner": "sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/dz.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̠ʃ",
+    "slug": "voiceless-postalveolar-sibilant-affricate",
+    "place": "postalveolar",
+    "manner": "sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̠ʃ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̠ʒ",
+    "slug": "voiced-postalveolar-sibilant-affricate",
+    "place": "postalveolar",
+    "manner": "sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/d̠ʒ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tʂ",
+    "slug": "voiceless-retroflex-sibilant-affricate",
+    "place": "retroflex",
+    "manner": "sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tʂ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "dʐ",
+    "slug": "voiced-retroflex-sibilant-affricate",
+    "place": "retroflex",
+    "manner": "sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/dʐ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɕ",
+    "slug": "voiceless-palatal-sibilant-affricate",
+    "place": "palatal",
+    "manner": "sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tɕ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "dʑ",
+    "slug": "voiced-palatal-sibilant-affricate",
+    "place": "palatal",
+    "manner": "sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/dʑ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "pɸ",
+    "slug": "voiceless-bilabial-non-sibilant-affricate",
+    "place": "bilabial",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/pɸ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "bβ",
+    "slug": "voiced-bilabial-non-sibilant-affricate",
+    "place": "bilabial",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/bβ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "p̪f",
+    "slug": "voiceless-labiodental-non-sibilant-affricate",
+    "place": "labiodental",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/p̪f.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "b̪v",
+    "slug": "voiced-labiodental-non-sibilant-affricate",
+    "place": "labiodental",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/b̪v.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̪θ",
+    "slug": "voiceless-dental-non-sibilant-affricate",
+    "place": "dental",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̪θ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̪ð",
+    "slug": "voiced-dental-non-sibilant-affricate",
+    "place": "dental",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/d̪ð.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɹ̝̊",
+    "slug": "voiceless-alveolar-non-sibilant-affricate",
+    "place": "alveolar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "dɹ̝",
+    "slug": "voiced-alveolar-non-sibilant-affricate",
+    "place": "alveolar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̠ɹ̠̊˔",
+    "slug": "voiceless-postalveolar-non-sibilant-affricate",
+    "place": "postalveolar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̠ɹ̠̊˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d̠ɹ̠˔",
+    "slug": "voiced-postalveolar-non-sibilant-affricate",
+    "place": "postalveolar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/d̠ɹ̠˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "cç",
+    "slug": "voiceless-palatal-non-sibilant-affricate",
+    "place": "palatal",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/cç.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɟʝ",
+    "slug": "voiced-palatal-non-sibilant-affricate",
+    "place": "palatal",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/ɟʝ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kx",
+    "slug": "voiceless-velar-non-sibilant-affricate",
+    "place": "velar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/kx.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡɣ",
+    "slug": "voiced-velar-non-sibilant-affricate",
+    "place": "velar",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/ɡɣ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "qχ",
+    "slug": "voiceless-uvular-non-sibilant-affricate",
+    "place": "uvular",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/qχ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɢʁ",
+    "slug": "voiced-uvular-non-sibilant-affricate",
+    "place": "uvular",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiced",
+    "audio": "audio/ɢʁ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʡʜ",
+    "slug": "voiceless-pharyngeal-epiglottal-non-sibilant-affricate",
+    "place": "pharyngeal/epiglottal",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/ʡʜ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʡʢ",
+    "slug": "voiceless-pharyngeal-epiglottal-non-sibilant-affricate",
+    "place": "pharyngeal/epiglottal",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/ʡʢ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʔh",
+    "slug": "voiceless-glottal-non-sibilant-affricate",
+    "place": "glottal",
+    "manner": "non-sibilant affricate",
+    "voicing": "voiceless",
+    "audio": "audio/ʔh.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "s̪",
+    "slug": "voiceless-dental-sibilant-fricative",
+    "place": "dental",
+    "manner": "sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/s̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "z̪",
+    "slug": "voiced-dental-sibilant-fricative",
+    "place": "dental",
+    "manner": "sibilant fricative",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "s",
+    "slug": "voiceless-alveolar-sibilant-fricative",
+    "place": "alveolar",
+    "manner": "sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/s.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "z",
+    "slug": "voiced-alveolar-sibilant-fricative",
+    "place": "alveolar",
+    "manner": "sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/z.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʃ",
+    "slug": "voiceless-postalveolar-sibilant-fricative",
+    "place": "postalveolar",
+    "manner": "sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ʃ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʒ",
+    "slug": "voiced-postalveolar-sibilant-fricative",
+    "place": "postalveolar",
+    "manner": "sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʒ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʂ",
+    "slug": "voiceless-retroflex-sibilant-fricative",
+    "place": "retroflex",
+    "manner": "sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ʂ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʐ",
+    "slug": "voiced-retroflex-sibilant-fricative",
+    "place": "retroflex",
+    "manner": "sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʐ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɕ",
+    "slug": "voiceless-palatal-sibilant-fricative",
+    "place": "palatal",
+    "manner": "sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɕ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʑ",
+    "slug": "voiced-palatal-sibilant-fricative",
+    "place": "palatal",
+    "manner": "sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʑ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɸ",
+    "slug": "voiceless-bilabial-non-sibilant-fricative",
+    "place": "bilabial",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɸ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "β",
+    "slug": "voiced-bilabial-non-sibilant-fricative",
+    "place": "bilabial",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/β.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "f",
+    "slug": "voiceless-labiodental-non-sibilant-fricative",
+    "place": "labiodental",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/f.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "v",
+    "slug": "voiced-labiodental-non-sibilant-fricative",
+    "place": "labiodental",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/v.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "θ̼",
+    "slug": "voiceless-linguolabial-non-sibilant-fricative",
+    "place": "linguolabial",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/θ̼.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ð̼",
+    "slug": "voiced-linguolabial-non-sibilant-fricative",
+    "place": "linguolabial",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ð̼.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "θ",
+    "slug": "voiceless-dental-non-sibilant-fricative",
+    "place": "dental",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/θ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ð",
+    "slug": "voiced-dental-non-sibilant-fricative",
+    "place": "dental",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ð.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "θ̠",
+    "slug": "voiceless-alveolar-non-sibilant-fricative",
+    "place": "alveolar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ð̠",
+    "slug": "voiced-alveolar-non-sibilant-fricative",
+    "place": "alveolar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɹ̠̊˔",
+    "slug": "voiceless-postalveolar-non-sibilant-fricative",
+    "place": "postalveolar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɹ̠̊˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɹ̠˔",
+    "slug": "voiced-postalveolar-non-sibilant-fricative",
+    "place": "postalveolar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ɹ̠˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɻ̊˔",
+    "slug": "voiceless-retroflex-non-sibilant-fricative",
+    "place": "retroflex",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɻ̊˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɻ˔",
+    "slug": "voiced-retroflex-non-sibilant-fricative",
+    "place": "retroflex",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ɻ˔.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ç",
+    "slug": "voiceless-palatal-non-sibilant-fricative",
+    "place": "palatal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ç.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʝ",
+    "slug": "voiced-palatal-non-sibilant-fricative",
+    "place": "palatal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʝ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "x",
+    "slug": "voiceless-velar-non-sibilant-fricative",
+    "place": "velar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/x.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɣ",
+    "slug": "voiced-velar-non-sibilant-fricative",
+    "place": "velar",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ɣ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "χ",
+    "slug": "voiceless-uvular-non-sibilant-fricative",
+    "place": "uvular",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/χ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʁ",
+    "slug": "voiced-uvular-non-sibilant-fricative",
+    "place": "uvular",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʁ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ħ",
+    "slug": "voiceless-pharyngeal-epiglottal-non-sibilant-fricative",
+    "place": "pharyngeal/epiglottal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ħ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʕ",
+    "slug": "voiced-pharyngeal-epiglottal-non-sibilant-fricative",
+    "place": "pharyngeal/epiglottal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʕ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "h",
+    "slug": "voiceless-glottal-non-sibilant-fricative",
+    "place": "glottal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiceless",
+    "audio": "audio/h.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɦ",
+    "slug": "voiced-glottal-non-sibilant-fricative",
+    "place": "glottal",
+    "manner": "non-sibilant fricative",
+    "voicing": "voiced",
+    "audio": "audio/ɦ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "β̞",
+    "slug": "voiced-bilabial-approximant",
+    "place": "bilabial",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/β̞.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʋ",
+    "slug": "voiced-labiodental-approximant",
+    "place": "labiodental",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/ʋ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ð̞",
+    "slug": "voiced-dental-approximant",
+    "place": "dental",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɹ",
+    "slug": "voiced-alveolar-approximant",
+    "place": "alveolar",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɹ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɹ̠",
+    "slug": "voiced-postalveolar-approximant",
+    "place": "postalveolar",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɹ̠.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɻ",
+    "slug": "voiced-retroflex-approximant",
+    "place": "retroflex",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɻ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "j",
+    "slug": "voiced-palatal-approximant",
+    "place": "palatal",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/j.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɰ",
+    "slug": "voiced-velar-approximant",
+    "place": "velar",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɰ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "˷",
+    "slug": "voiced-glottal-approximant",
+    "place": "glottal",
+    "manner": "approximant",
+    "voicing": "voiced",
+    "audio": "audio/˷.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ⱱ̟",
+    "slug": "voiced-bilabial-tap-flap",
+    "place": "bilabial",
+    "manner": "tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ⱱ̟.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ⱱ",
+    "slug": "voiced-labiodental-tap-flap",
+    "place": "labiodental",
+    "manner": "tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ⱱ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɾ̥",
+    "slug": "voiceless-alveolar-tap-flap",
+    "place": "alveolar",
+    "manner": "tap/flap",
+    "voicing": "voiceless",
+    "audio": "audio/ɾ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɾ",
+    "slug": "voiced-alveolar-tap-flap",
+    "place": "alveolar",
+    "manner": "tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ɾ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɽ̊",
+    "slug": "voiceless-retroflex-tap-flap",
+    "place": "retroflex",
+    "manner": "tap/flap",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɽ",
+    "slug": "voiced-retroflex-tap-flap",
+    "place": "retroflex",
+    "manner": "tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ɽ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɢ̆",
+    "slug": "voiced-uvular-tap-flap",
+    "place": "uvular",
+    "manner": "tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ɢ̆.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʡ̮",
+    "slug": "voiceless-pharyngeal-epiglottal-tap-flap",
+    "place": "pharyngeal/epiglottal",
+    "manner": "tap/flap",
+    "voicing": "voiceless",
+    "audio": "audio/ʡ̮.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʙ̥",
+    "slug": "voiceless-bilabial-trill",
+    "place": "bilabial",
+    "manner": "trill",
+    "voicing": "voiceless",
+    "audio": "audio/ʙ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʙ",
+    "slug": "voiced-bilabial-trill",
+    "place": "bilabial",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/ʙ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "r̥",
+    "slug": "voiceless-alveolar-trill",
+    "place": "alveolar",
+    "manner": "trill",
+    "voicing": "voiceless",
+    "audio": "audio/r̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "r",
+    "slug": "voiced-alveolar-trill",
+    "place": "alveolar",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/r.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "r̠",
+    "slug": "voiced-postalveolar-trill",
+    "place": "postalveolar",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/r̠.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɽ̊r̥",
+    "slug": "voiceless-retroflex-trill",
+    "place": "retroflex",
+    "manner": "trill",
+    "voicing": "voiceless",
+    "audio": "audio/ɽ̊r̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɽr",
+    "slug": "voiced-retroflex-trill",
+    "place": "retroflex",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/ɽr.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʀ̥",
+    "slug": "voiceless-uvular-trill",
+    "place": "uvular",
+    "manner": "trill",
+    "voicing": "voiceless",
+    "audio": "audio/ʀ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʀ",
+    "slug": "voiced-uvular-trill",
+    "place": "uvular",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/ʀ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʜ",
+    "slug": "voiceless-pharyngeal-epiglottal-trill",
+    "place": "pharyngeal/epiglottal",
+    "manner": "trill",
+    "voicing": "voiceless",
+    "audio": "audio/ʜ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʢ",
+    "slug": "voiced-pharyngeal-epiglottal-trill",
+    "place": "pharyngeal/epiglottal",
+    "manner": "trill",
+    "voicing": "voiced",
+    "audio": "audio/ʢ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɬ",
+    "slug": "voiceless-alveolar-lateral-affricate",
+    "place": "alveolar",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tɬ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "dɮ",
+    "slug": "voiced-alveolar-lateral-affricate",
+    "place": "alveolar",
+    "manner": "lateral affricate",
+    "voicing": "voiced",
+    "audio": "audio/dɮ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tꞎ",
+    "slug": "voiceless-retroflex-lateral-affricate",
+    "place": "retroflex",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tꞎ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "d𝼅",
+    "slug": "voiced-retroflex-lateral-affricate",
+    "place": "retroflex",
+    "manner": "lateral affricate",
+    "voicing": "voiced",
+    "audio": "audio/d𝼅.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "c𝼆",
+    "slug": "voiceless-palatal-lateral-affricate",
+    "place": "palatal",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/c𝼆.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɟʎ̝",
+    "slug": "voiced-palatal-lateral-affricate",
+    "place": "palatal",
+    "manner": "lateral affricate",
+    "voicing": "voiced",
+    "audio": "audio/ɟʎ̝.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k𝼄",
+    "slug": "voiceless-velar-lateral-affricate",
+    "place": "velar",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/k𝼄.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡʟ̝",
+    "slug": "voiced-velar-lateral-affricate",
+    "place": "velar",
+    "manner": "lateral affricate",
+    "voicing": "voiced",
+    "audio": "audio/ɡʟ̝.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɬ̪",
+    "slug": "voiceless-dental-lateral-fricative",
+    "place": "dental",
+    "manner": "lateral fricative",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɬ",
+    "slug": "voiceless-alveolar-lateral-fricative",
+    "place": "alveolar",
+    "manner": "lateral fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɬ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɮ",
+    "slug": "voiced-alveolar-lateral-fricative",
+    "place": "alveolar",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/ɮ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ꞎ",
+    "slug": "voiced-retroflex-lateral-fricative",
+    "place": "retroflex",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/ꞎ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼅",
+    "slug": "voiced-retroflex-lateral-fricative",
+    "place": "retroflex",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/𝼅.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼆",
+    "slug": "voiced-palatal-lateral-fricative",
+    "place": "palatal",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/𝼆.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʎ̝",
+    "slug": "voiced-palatal-lateral-fricative",
+    "place": "palatal",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʎ̝.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼄",
+    "slug": "voiced-velar-lateral-fricative",
+    "place": "velar",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/𝼄.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʟ̝",
+    "slug": "voiced-velar-lateral-fricative",
+    "place": "velar",
+    "manner": "lateral fricative",
+    "voicing": "voiced",
+    "audio": "audio/ʟ̝.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "l̪",
+    "slug": "voiced-dental-lateral-approximant",
+    "place": "dental",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/l̪.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "l̥",
+    "slug": "voiceless-alveolar-lateral-approximant",
+    "place": "alveolar",
+    "manner": "lateral approximant",
+    "voicing": "voiceless",
+    "audio": "audio/l̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "l",
+    "slug": "voiced-alveolar-lateral-approximant",
+    "place": "alveolar",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/l.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "l̠",
+    "slug": "voiced-postalveolar-lateral-approximant",
+    "place": "postalveolar",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/l̠.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɭ̊",
+    "slug": "voiceless-retroflex-lateral-approximant",
+    "place": "retroflex",
+    "manner": "lateral approximant",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɭ",
+    "slug": "voiced-retroflex-lateral-approximant",
+    "place": "retroflex",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɭ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʎ̥",
+    "slug": "voiceless-palatal-lateral-approximant",
+    "place": "palatal",
+    "manner": "lateral approximant",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʎ",
+    "slug": "voiced-palatal-lateral-approximant",
+    "place": "palatal",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/ʎ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʟ̥",
+    "slug": "voiceless-velar-lateral-approximant",
+    "place": "velar",
+    "manner": "lateral approximant",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʟ",
+    "slug": "voiced-velar-lateral-approximant",
+    "place": "velar",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/ʟ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʟ̠",
+    "slug": "voiced-uvular-lateral-approximant",
+    "place": "uvular",
+    "manner": "lateral approximant",
+    "voicing": "voiced",
+    "audio": "audio/ʟ̠.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɺ̥",
+    "slug": "voiceless-alveolar-lateral-tap-flap",
+    "place": "alveolar",
+    "manner": "lateral tap/flap",
+    "voicing": "voiceless",
+    "audio": "audio/ɺ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɺ",
+    "slug": "voiced-alveolar-lateral-tap-flap",
+    "place": "alveolar",
+    "manner": "lateral tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ɺ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼈̥",
+    "slug": "voiceless-retroflex-lateral-tap-flap",
+    "place": "retroflex",
+    "manner": "lateral tap/flap",
+    "voicing": "voiceless",
+    "audio": "audio/𝼈̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼈",
+    "slug": "voiced-retroflex-lateral-tap-flap",
+    "place": "retroflex",
+    "manner": "lateral tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/𝼈.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʎ̮",
+    "slug": "voiced-palatal-lateral-tap-flap",
+    "place": "palatal",
+    "manner": "lateral tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ʎ̮.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʟ̆",
+    "slug": "voiced-velar-lateral-tap-flap",
+    "place": "velar",
+    "manner": "lateral tap/flap",
+    "voicing": "voiced",
+    "audio": "audio/ʟ̆.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t͡p",
+    "slug": "voiceless-plosive",
+    "place": "",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/t͡p.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k͡p",
+    "slug": "voiceless-plosive",
+    "place": "",
+    "manner": "plosive",
+    "voicing": "voiceless",
+    "audio": "audio/k͡p.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡ͡b",
+    "slug": "voiced-plosive",
+    "place": "",
+    "manner": "plosive",
+    "voicing": "voiced",
+    "audio": "audio/ɡ͡b.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "q͡p",
+    "slug": "voiceless",
+    "place": "",
+    "manner": "",
+    "voicing": "voiceless",
+    "audio": "audio/q͡p.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋ͡m",
+    "slug": "voiced-nasal",
+    "place": "",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": "audio/ŋ͡m.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʍ",
+    "slug": "voiceless-fricative-approximant",
+    "place": "",
+    "manner": "fricative/approximant",
+    "voicing": "voiceless",
+    "audio": "audio/ʍ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "w",
+    "slug": "voiced-fricative-approximant",
+    "place": "",
+    "manner": "fricative/approximant",
+    "voicing": "voiced",
+    "audio": "audio/w.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɥ",
+    "slug": "voiced-fricative-approximant",
+    "place": "",
+    "manner": "fricative/approximant",
+    "voicing": "voiced",
+    "audio": "audio/ɥ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɧ",
+    "slug": "voiceless",
+    "place": "",
+    "manner": "",
+    "voicing": "voiceless",
+    "audio": "audio/ɧ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɫ",
+    "slug": "voiced",
+    "place": "",
+    "manner": "",
+    "voicing": "voiced",
+    "audio": "audio/ɫ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ̊͜ɓ̥",
+    "slug": "voiceless-implosive",
+    "place": "",
+    "manner": "implosive",
+    "voicing": "voiceless",
+    "audio": "audio/ɠ̊͜ɓ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ͡ɓ",
+    "slug": "voiced-implosive",
+    "place": "",
+    "manner": "implosive",
+    "voicing": "voiced",
+    "audio": "audio/ɠ͡ɓ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɓ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɓ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɗ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɗ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ᶑ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ᶑ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʄ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ʄ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɠ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʛ",
+    "slug": "voiced-voiced",
+    "place": "",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ʛ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɓ̥",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɓ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɗ̥",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɗ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ᶑ̥",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ᶑ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʄ̥",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ʄ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ̊",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɠ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʛ̥",
+    "slug": "voiceless-voiceless",
+    "place": "",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ʛ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "pʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/pʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/tʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʈʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/ʈʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "cʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/cʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/kʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "qʼ",
+    "slug": "voiceless-stop",
+    "place": "",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/qʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "fʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/fʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "sʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/sʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʂʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ʂʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɕʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɕʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "xʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/xʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "χʼ",
+    "slug": "voiceless-fricative",
+    "place": "",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/χʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɸʼ",
+    "slug": "voiceless",
+    "place": "",
+    "manner": "",
+    "voicing": "voiceless",
+    "audio": "audio/ɸʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "θʼ",
+    "slug": "voiceless",
+    "place": "",
+    "manner": "",
+    "voicing": "voiceless",
+    "audio": "audio/θʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʃʼ",
+    "slug": "voiceless",
+    "place": "",
+    "manner": "",
+    "voicing": "voiceless",
+    "audio": "audio/ʃʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̪θʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̪θʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tsʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tsʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʈʂʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/ʈʂʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̠ʃʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̠ʃʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kxʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/kxʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "qχʼ",
+    "slug": "voiceless-affricate",
+    "place": "",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/qχʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɬʼ",
+    "slug": "voiceless-lateral",
+    "place": "",
+    "manner": "lateral",
+    "voicing": "voiceless",
+    "audio": "audio/ɬʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɬʼ",
+    "slug": "voiceless-lateral",
+    "place": "",
+    "manner": "lateral",
+    "voicing": "voiceless",
+    "audio": "audio/tɬʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "c𝼆ʼ",
+    "slug": "voiceless-lateral",
+    "place": "",
+    "manner": "lateral",
+    "voicing": "voiceless",
+    "audio": "audio/c𝼆ʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k𝼄ʼ",
+    "slug": "voiceless-lateral",
+    "place": "",
+    "manner": "lateral",
+    "voicing": "voiceless",
+    "audio": "audio/k𝼄ʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kʘ",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/kʘ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǀ",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/kǀ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǃ",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/kǃ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǁ",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/kǁ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k𝼊",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/k𝼊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǂ",
+    "slug": "voiceless-click",
+    "place": "",
+    "manner": "click",
+    "voicing": "voiceless",
+    "audio": "audio/kǂ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "𝼈̊",
+    "slug": "voiceless-retroflex-lateral-tap-flap",
+    "place": "retroflex",
+    "manner": "lateral tap/flap",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɓ",
+    "slug": "voiced-bl-voiced",
+    "place": "bl",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɓ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɗ",
+    "slug": "voiced-a-voiced",
+    "place": "a",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɗ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ᶑ",
+    "slug": "voiced-rf-voiced",
+    "place": "rf",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ᶑ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʄ",
+    "slug": "voiced-p-voiced",
+    "place": "p",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ʄ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ",
+    "slug": "voiced-v-voiced",
+    "place": "v",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ɠ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʛ",
+    "slug": "voiced-u-voiced",
+    "place": "u",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": "audio/ʛ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɓ̥",
+    "slug": "voiceless-bl-voiceless",
+    "place": "bl",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɓ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɗ̥",
+    "slug": "voiceless-a-voiceless",
+    "place": "a",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɗ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ᶑ̊",
+    "slug": "voiceless-rf-voiceless",
+    "place": "rf",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʄ̊",
+    "slug": "voiceless-p-voiceless",
+    "place": "p",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɠ̊",
+    "slug": "voiceless-v-voiceless",
+    "place": "v",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ɠ̊.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʛ̥",
+    "slug": "voiceless-u-voiceless",
+    "place": "u",
+    "manner": "voiceless",
+    "voicing": "voiceless",
+    "audio": "audio/ʛ̥.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "pʼ",
+    "slug": "voiceless-bl-stop",
+    "place": "bl",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/pʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tʼ",
+    "slug": "voiceless-a-stop",
+    "place": "a",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/tʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʈʼ",
+    "slug": "voiceless-rf-stop",
+    "place": "rf",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/ʈʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "cʼ",
+    "slug": "voiceless-p-stop",
+    "place": "p",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/cʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kʼ",
+    "slug": "voiceless-v-stop",
+    "place": "v",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/kʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "qʼ",
+    "slug": "voiceless-u-stop",
+    "place": "u",
+    "manner": "stop",
+    "voicing": "voiceless",
+    "audio": "audio/qʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "p̪fʼ",
+    "slug": "voiceless-ld-affricate",
+    "place": "ld",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̪θʼ",
+    "slug": "voiceless-d-affricate",
+    "place": "d",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̪θʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tsʼ",
+    "slug": "voiceless-a-affricate",
+    "place": "a",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tsʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "t̠ʃʼ",
+    "slug": "voiceless-pa-affricate",
+    "place": "pa",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/t̠ʃʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tʂʼ",
+    "slug": "voiceless-rf-affricate",
+    "place": "rf",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɕʼ",
+    "slug": "voiceless-p-affricate",
+    "place": "p",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "kxʼ",
+    "slug": "voiceless-v-affricate",
+    "place": "v",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/kxʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "qχʼ",
+    "slug": "voiceless-u-affricate",
+    "place": "u",
+    "manner": "affricate",
+    "voicing": "voiceless",
+    "audio": "audio/qχʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɸʼ",
+    "slug": "voiceless-bl-fricative",
+    "place": "bl",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɸʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "fʼ",
+    "slug": "voiceless-ld-fricative",
+    "place": "ld",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/fʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "θʼ",
+    "slug": "voiceless-d-fricative",
+    "place": "d",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/θʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "sʼ",
+    "slug": "voiceless-a-fricative",
+    "place": "a",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/sʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʃʼ",
+    "slug": "voiceless-pa-fricative",
+    "place": "pa",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ʃʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʂʼ",
+    "slug": "voiceless-rf-fricative",
+    "place": "rf",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ʂʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɕʼ",
+    "slug": "voiceless-p-fricative",
+    "place": "p",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɕʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "xʼ",
+    "slug": "voiceless-v-fricative",
+    "place": "v",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/xʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "χʼ",
+    "slug": "voiceless-u-fricative",
+    "place": "u",
+    "manner": "fricative",
+    "voicing": "voiceless",
+    "audio": "audio/χʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "tɬʼ",
+    "slug": "voiceless-a-lateral-affricate",
+    "place": "a",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/tɬʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "c𝼆ʼ",
+    "slug": "voiceless-p-lateral-affricate",
+    "place": "p",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/c𝼆ʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "k𝼄ʼ",
+    "slug": "voiceless-v-lateral-affricate",
+    "place": "v",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": "audio/k𝼄ʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "q𝼄ʼ",
+    "slug": "voiceless-u-lateral-affricate",
+    "place": "u",
+    "manner": "lateral affricate",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɬʼ",
+    "slug": "voiceless-a-lateral-fricative",
+    "place": "a",
+    "manner": "lateral fricative",
+    "voicing": "voiceless",
+    "audio": "audio/ɬʼ.mp3"
+  },
+  {
+    "form": "consonant",
+    "symbol": "kʘqʘ",
+    "slug": "voiceless-bl-tenuis",
+    "place": "bl",
+    "manner": "tenuis",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǀqǀ",
+    "slug": "voiceless-d-tenuis",
+    "place": "d",
+    "manner": "tenuis",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǃqǃ",
+    "slug": "voiceless-a-tenuis",
+    "place": "a",
+    "manner": "tenuis",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "k𝼊q𝼊",
+    "slug": "voiceless-rf-tenuis",
+    "place": "rf",
+    "manner": "tenuis",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǂqǂ",
+    "slug": "voiceless-p-tenuis",
+    "place": "p",
+    "manner": "tenuis",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡʘɢʘ",
+    "slug": "voiced-bl-voiced",
+    "place": "bl",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡǀɢǀ",
+    "slug": "voiced-d-voiced",
+    "place": "d",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡǃɢǃ",
+    "slug": "voiced-a-voiced",
+    "place": "a",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡ𝼊ɢ𝼊",
+    "slug": "voiced-rf-voiced",
+    "place": "rf",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡǂɢǂ",
+    "slug": "voiced-p-voiced",
+    "place": "p",
+    "manner": "voiced",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋʘɴʘ",
+    "slug": "voiced-bl-nasal",
+    "place": "bl",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋǀɴǀ",
+    "slug": "voiced-d-nasal",
+    "place": "d",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋǃɴǃ",
+    "slug": "voiced-a-nasal",
+    "place": "a",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋ𝼊ɴ𝼊",
+    "slug": "voiced-rf-nasal",
+    "place": "rf",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋǂɴǂ",
+    "slug": "voiced-p-nasal",
+    "place": "p",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ʞ",
+    "slug": "voiced-v-nasal",
+    "place": "v",
+    "manner": "nasal",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "kǁqǁ",
+    "slug": "voiceless-a-tenuis-lateral",
+    "place": "a",
+    "manner": "tenuis lateral",
+    "voicing": "voiceless",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ɡǁɢǁ",
+    "slug": "voiced-a-voiced-lateral",
+    "place": "a",
+    "manner": "voiced lateral",
+    "voicing": "voiced",
+    "audio": null
+  },
+  {
+    "form": "consonant",
+    "symbol": "ŋǁɴǁ",
+    "slug": "voiced-a-nasal-lateral",
+    "place": "a",
+    "manner": "nasal lateral",
+    "voicing": "voiced",
+    "audio": null
+  }
+]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>數據來源 — 音韻學學習工具</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./resources.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-title">
+      <span class="icon">&#119070;</span>
+      音韻學學習工具
+    </div>
+    <nav class="nav-tabs">
+      <a class="nav-tab" href="./detail.html">&#128270; 音韻詳情</a>
+      <a class="nav-tab" href="./fanqie.html">&#128269; 反切搜索</a>
+      <a class="nav-tab" href="./filter.html">&#128202; 韻書瀏覽器</a>
+      <a class="nav-tab" href="./ipa.html">&#128488; IPA發音訓練</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn-action" href="./detail.html">返回工具</a>
+    </div>
+  </header>
+
+  <main class="app-main resource-page">
+    <section class="resource-heading">
+      <p class="resource-kicker">DATA SOURCES · 數據來源</p>
+      <h1>本網站數據來源</h1>
+      <p>以下區域用於集中展示網站涉及的原始數據、參考資料、音頻來源及使用說明。</p>
+    </section>
+
+    <section class="resource-content" id="resources-content">
+      <article class="resource-card">
+        <h2>《廣韻》信息</h2>
+        <p>
+          知乎專欄文章《廣韻字音表（20170209）》（作者：poem）。<br>
+          <a target="_blank" href="https://zhuanlan.zhihu.com/p/20430939">鏈接：https://zhuanlan.zhihu.com/p/20430939</a>
+        </p>
+      </article>
+      <article class="resource-card">
+        <h2>上古、中古音擬音</h2>
+        <p>
+          整理自FreeMdict論壇用戶amob與midzuki_yuka於2024年4月分享的《古音查詢詞典》（MDX）及“niyin”原始檔案。<br>
+          <a target="_blank" href="https://forum.freemdict.com/t/topic/26371">鏈接：https://forum.freemdict.com/t/topic/26371</a>
+        </p>
+      </article>
+      <article class="resource-card">
+        <h2>中古音語音生成依據</h2>
+        <p>
+          “切韻TTS”網站直接生成下載｜其發音參照UntPhesoca設計的切韻拼音的IPA轉寫方案生成（<a href="https://zhuanlan.zhihu.com/p/545490174">知乎專欄</a>）。<br>TTS訓練中僅對音節字符數作平均化等轉寫工程調整。<br>
+          <a target="_blank" href="https://qieyun-tts.com/help">“切韻TTS”作者說明：https://qieyun-tts.com/help</a>
+        </p>
+      </article>
+      <article class="resource-card">
+        <h2>元音與輔音IPA數據</h2>
+        <p>
+          本網站的元音與輔音IPA相關表格，出自臺灣政治大學吳瑞文老師2026–2027學年第一學期《聲韻學》課程資料；IPA對應發音則取自維基百科，並通過cluesurf/wikipedia-ipa資料集下載取得。<br>
+          <a target="_blank" href="https://huggingface.co/datasets/cluesurf/wikipedia-ipa">鏈接：https://huggingface.co/datasets/cluesurf/wikipedia-ipa</a>
+        </p>
+      </article>
+    </section>
+    
+    <section class="resource-content-announce" >
+      <article class="resource-card">
+        <h2>使用聲明</h2>
+        <p>本站不擁有上述詞典的版權，相關數據僅供個人學習與學術研究參考，請勿用於商業用途。</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="app-footer" style="text-align: center;">
+    <div>音韻學學習工具 v2.0 &#8226; 古音數字化研習平臺 &#8226; <a href="./resources.html" style="color: inherit;">本網站數據來源</a></div>
+    <div>聲明：本站不擁有上述詞典的版權，相關數據僅供個人學習與學術研究參考，請勿用於商業用途。</div>
+    <div>作者：zigui111 &#8226; <img src="/imgs/github.png" style="vertical-align: middle;height: 15px;"> github：<a href="https://github.com/zigui111/linggu" target="_blank" style="text-decoration: none;color: inherit;font-weight: inherit;">https://github.com/zigui111/linggu</a></div>
+    <div class="filing-links">
+      <span class="filing-item" id="icp-record">京ICP備2023021416號</span>
+      <span class="filing-item" id="gongan-record">京公網安備11010902000981號</span>
+    </div>
+  </footer>
+</body>
+</html>

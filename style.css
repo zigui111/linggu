@@ -1,6 +1,6 @@
 /* ============================================================
-   音韵学学习工具 — 主样式表 (v2.1)
-   修复：筛选面板滚动
+   音韻學學習工具 — 主樣式表 (v2.1)
+   修復：篩選面板滾動
    ============================================================ */
 
 :root {
@@ -161,6 +161,7 @@ body {
   font-weight: 500;
   transition: all 0.2s;
 }
+a.btn-action { text-decoration: none; }
 .btn-action:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-bg); }
 .btn-action.bookmarked { border-color: var(--color-accent); color: var(--color-accent); background: var(--color-accent-bg); }
 .header-actions {

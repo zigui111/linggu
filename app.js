@@ -1,13 +1,13 @@
 /* ============================================================
-   音韵学学习工具 — 应用逻辑 (v2.1)
-   修复：allChars 正确填充为字头，表格显示汉字列表
+   音韻學學習工具 — 應用邏輯 (v2.1)
+   修復：allChars 正確填充爲字頭，表格顯示漢字列表
    ============================================================ */
 
-// ============ 全局状态 ============
+// ============ 全局狀態 ============
 const App = {
   data: null,
   charMap: {},             // char -> { char, fanqie, shengmu, yunbu, deng, hu, shengdiao, ipa, she, loaded, detailLoaded, ... }
-  charReadings: {},        // char -> [同字的多份读音/解释]
+  charReadings: {},        // char -> [同字的多份讀音/解釋]
   fanqieMap: {},
   ipaMap: {},
   allChars: [],
@@ -166,16 +166,16 @@ async function fetchText(url) {
         dataTextCache.set(url, stored);
         return stored;
       }
-    } catch (e) { /* 缓存不可用时直接请求 */ }
+    } catch (e) { /* 緩存不可用時直接請求 */ }
   }
   const resp = await fetch(url);
-  if (!resp.ok) throw new Error(`加载失败: ${url}`);
+  if (!resp.ok) throw new Error(`加載失敗: ${url}`);
   const text = await resp.text();
   if (App.cacheEnabled) dataTextCache.set(url, text);
   if (App.cacheEnabled && typeof localStorage !== 'undefined') {
     try {
       localStorage.setItem(cacheKey, text);
-    } catch (e) { /* 超出存储上限时忽略 */ }
+    } catch (e) { /* 超出存儲上限時忽略 */ }
   }
   return text;
 }
@@ -225,7 +225,7 @@ async function syncCacheDate() {
     if (typeof localStorage !== 'undefined') {
       try { localStorage.setItem(DATA_CACHE_DATE_KEY, lastUpdate); } catch (e) { /* 忽略 */ }
     }
-    showToast(`数据缓存日期已更新为 ${lastUpdate}`);
+    showToast(`數據緩存日期已更新爲 ${lastUpdate}`);
   }
 }
 function initCacheControl() {
@@ -254,12 +254,12 @@ function initCacheControl() {
         try { localStorage.setItem(DATA_CACHE_ENABLED_KEY, enabled ? '1' : '0'); } catch (e) { /* 忽略 */ }
       }
       promptEl.style.display = 'none';
-      showToast(enabled ? '已开启本地数据缓存' : '暂不开启本地数据缓存');
+      showToast(enabled ? '已開啓本地數據緩存' : '暫不開啓本地數據緩存');
     };
     if (accept) accept.addEventListener('click', () => finish(true));
     if (decline) decline.addEventListener('click', () => finish(false));
   } else if (!seen) {
-    showToast('未启用本地数据缓存，可在右上角设置中开启', 5000);
+    showToast('未啓用本地數據緩存，可在右上角設置中開啓', 5000);
   }
   if (!seen && typeof localStorage !== 'undefined') {
     try { localStorage.setItem(DATA_CACHE_SEEN_KEY, '1'); } catch (e) { /* 忽略 */ }
@@ -271,7 +271,7 @@ function initCacheControl() {
       try { localStorage.setItem(DATA_CACHE_ENABLED_KEY, App.cacheEnabled ? '1' : '0'); } catch (e) { /* 忽略 */ }
     }
     if (!App.cacheEnabled) clearDataCaches();
-    showToast(App.cacheEnabled ? '已开启数据缓存' : '已关闭数据缓存，本次不再复用缓存');
+    showToast(App.cacheEnabled ? '已開啓數據緩存' : '已關閉數據緩存，本次不再複用緩存');
   });
 }
 
@@ -300,7 +300,7 @@ async function loadDetailPrefix(prefix) {
     const text = await fetchText(`data/details/${prefix}.txt`);
     map = parseDetailText(text);
   } catch (e) {
-    console.warn(`读取详情文件失败: data/details/${prefix}.txt`, e);
+    console.warn(`讀取詳情文件失敗: data/details/${prefix}.txt`, e);
   }
   if (App.cacheEnabled) App.detailPrefixCache[prefix] = map;
   return map;
@@ -320,7 +320,7 @@ function showLoading(visible) {
   else el.classList.remove('visible');
 }
 
-// ============ 数据加载 ============
+// ============ 數據加載 ============
 function parseIndexLine(line) {
   return line.trim().match(/[\u3400-\u9fff][A-Za-z]?/g) || [];
 }
@@ -329,11 +329,11 @@ async function loadData() {
   showLoading(true);
   try {
     await syncCacheDate();
-    // 筛选页才加载 filterindex；搜索页不加载筛选资源
+    // 篩選頁才加載 filterindex；搜索頁不加載篩選資源
     if ($('#chips-initial')) {
       const idxText = await fetchText('data/filterindex.txt');
       const lines = idxText.split('\n').filter(line => line.trim() !== '');
-      if (lines.length < 6) throw new Error('filterindex 格式错误，需6行');
+      if (lines.length < 6) throw new Error('filterindex 格式錯誤，需6行');
       const categories = ['sheng', 'yun', 'deng', 'hu', 'diao', 'yunshe'];
       categories.forEach((cat, i) => {
         App.filterIndex[cat] = parseIndexLine(lines[i]);
@@ -343,16 +343,21 @@ async function loadData() {
       await ensureFanqieIndex();
     }
 
-    // 加载所有详情前缀，顺便从最后一列收集有音频的字
-    await Promise.all(DETAIL_PREFIXES.map(p => loadDetailPrefix(p)));
+    // 加載所有詳情前綴，順便註冊字頭讀音並從最後一列收集有音頻的字
+    const detailPrefixMaps = await Promise.all(DETAIL_PREFIXES.map(p => loadDetailPrefix(p)));
+    detailPrefixMaps.forEach(map => {
+      for (const [char, readings] of map.entries()) {
+        registerCharReadings(char, readings);
+      }
+    });
 
-    // 2. 加载生字本
+    // 2. 加載生字本
     
     loadBookmarks();
 
   } catch (err) {
-    console.error('数据加载失败:', err);
-    showToast('数据加载失败: ' + err.message);
+    console.error('數據加載失敗:', err);
+    showToast('數據加載失敗: ' + err.message);
   } finally {
     showLoading(false);
   }
@@ -382,7 +387,7 @@ async function loadFilterValue(cat, value) {
     App.filterData[cat][value] = chars;
     return chars;
   } catch (e) {
-    console.warn(`读取筛选文件失败: ${path}`, e);
+    console.warn(`讀取篩選文件失敗: ${path}`, e);
     App.filterData[cat][value] = [];
     return [];
   }
@@ -512,8 +517,8 @@ function renderNewFilterRows() {
   }
   const countEl = $('#result-count');
   if (countEl) {
-    const label = App.allMode ? '已加载' : '已确认';
-    countEl.innerHTML = `${label} <strong>${App.filterResults.length}</strong> 条${hasMoreRawResults() ? '（继续加载中…）' : ''}`;
+    const label = App.allMode ? '已加載' : '已確認';
+    countEl.innerHTML = `${label} <strong>${App.filterResults.length}</strong> 條${hasMoreRawResults() ? '（繼續加載中…）' : ''}`;
   }
 }
 
@@ -526,16 +531,16 @@ async function startFilterTable() {
   App.filterRendered = 0;
   App.filterPage = 0;
   App.filterBusy = false;
-  tbody.innerHTML = `<tr id="filter-loading-row"><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">正在加载筛选数据…</td></tr>`;
+  tbody.innerHTML = `<tr id="filter-loading-row"><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">正在加載篩選數據…</td></tr>`;
   const countEl = $('#result-count');
-  if (countEl) countEl.innerHTML = '正在筛选…';
+  if (countEl) countEl.innerHTML = '正在篩選…';
 
   try {
     await buildRawResults();
     if (jobId !== App.filterJobId) return;
     if (!hasMoreRawResults()) {
-      tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">没有符合条件的结果</td></tr>`;
-      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 条结果';
+      tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">沒有符合條件的結果</td></tr>`;
+      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 條結果';
       return;
     }
 
@@ -550,12 +555,12 @@ async function startFilterTable() {
     else finishFilterRows();
   } catch (e) {
     App.filterBusy = false;
-    console.error('筛选加载失败:', e);
-    showToast('筛选数据加载失败: ' + e.message);
+    console.error('篩選加載失敗:', e);
+    showToast('篩選數據加載失敗: ' + e.message);
   }
 }
 
-// ============ 获取单字详情（懒加载，支持一字多音/多解释） ============
+// ============ 獲取單字詳情（懶加載，支持一字多音/多解釋） ============
 function registerCharReadings(char, readings) {
   if (!readings || readings.length === 0) return;
   App.charReadings[char] = readings;
@@ -585,7 +590,7 @@ async function getCharDetail(char) {
   return readings.length ? readings[0] : null;
 }
 
-// ============ 导航 ============
+// ============ 導航 ============
 function initNavigation() {
   $$('.nav-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -596,6 +601,10 @@ function initNavigation() {
 }
 function switchView(view) {
   App.currentView = view;
+  if (view === 'ipa') {
+    window.location.href = 'ipa.html';
+    return;
+  }
   if (view === 'fanqie' && !$('#view-fanqie')) {
     window.location.href = 'fanqie.html';
     return;
@@ -638,9 +647,9 @@ async function doSearch() {
     return;
   }
   const query = input.value.trim();
-  if (!query) { showToast('请输入要检索的内容'); return; }
+  if (!query) { showToast('請輸入要檢索的內容'); return; }
   if (query.length !== 1) {
-    showToast('音韵详情仅支持输入单个汉字，反切请前往反切搜索');
+    showToast('音韻詳情僅支持輸入單個漢字，反切請前往反切搜索');
     return;
   }
   const url = new URL(window.location);
@@ -655,7 +664,7 @@ async function doSearch() {
   else showToast('未找到匹配的字');
 }
 
-// ============ 渲染详情（支持一字多音/多解释） ============
+// ============ 渲染詳情（支持一字多音/多解釋） ============
 function parseReconstructionText(text) {
   const list = [];
   const seen = new Set();
@@ -688,7 +697,7 @@ async function loadReconstructionEntries(detail, kind) {
           return parsed;
         }
       }
-    } catch (e) { /* 缓存损坏时重新加载 */ }
+    } catch (e) { /* 緩存損壞時重新加載 */ }
   }
   if (App.cacheEnabled && App.reconCache[cacheKey]) {
     detail[prop] = App.reconCache[cacheKey];
@@ -715,7 +724,7 @@ async function loadReconstructionEntries(detail, kind) {
       list = parseReconstructionText(text);
       if (list.length) break;
     } catch (e) {
-      console.warn(`读取${kind === 'oc' ? '上古' : '中古'}音拟音失败: ${path}`, e);
+      console.warn(`讀取${kind === 'oc' ? '上古' : '中古'}音擬音失敗: ${path}`, e);
       App.reconPrefixMiss.add(prefixKey);
     }
   }
@@ -723,7 +732,7 @@ async function loadReconstructionEntries(detail, kind) {
   detail[prop + 'Loaded'] = true;
   if (App.cacheEnabled) App.reconCache[cacheKey] = list;
   if (App.cacheEnabled && typeof localStorage !== 'undefined') {
-    try { localStorage.setItem(storageKey, JSON.stringify(list)); } catch (e) { /* 超出存储上限时忽略 */ }
+    try { localStorage.setItem(storageKey, JSON.stringify(list)); } catch (e) { /* 超出存儲上限時忽略 */ }
   }
   return list;
 }
@@ -743,7 +752,7 @@ function buildSchoolIpaList(detail, kind) {
 }
 
 function buildReconSectionHtml(readings, kind) {
-  const title = kind === 'oc' ? '上古音拟音' : '中古音拟音';
+  const title = kind === 'oc' ? '上古音擬音' : '中古音擬音';
   const list = [];
   const seen = new Set();
   readings.forEach(detail => {
@@ -757,29 +766,39 @@ function buildReconSectionHtml(readings, kind) {
     ? list.map(item => `
         <tr><td class="ipa-school">${escapeHtml(item.school)}</td><td class="ipa-value">/${escapeHtml(item.value)}/</td></tr>
       `).join('')
-    : '<tr><td colspan="2" style="text-align:center;color:var(--color-text-muted);">暂无拟音数据</td></tr>';
+    : '<tr><td colspan="2" style="text-align:center;color:var(--color-text-muted);">暫無擬音數據</td></tr>';
   return `
     <div class="ipa-card">
       <div class="card-title">${title}</div>
       <table class="ipa-table">
-        <thead><tr><th>学派</th><th>拟音</th></tr></thead>
+        <thead><tr><th>學派</th><th>擬音</th></tr></thead>
         <tbody>${rows}</tbody>
       </table>
     </div>
   `;
 }
 
+function buildReadingOverviewHeadingHtml() {
+  return `
+    <div class="recon-section-head">
+      <span class="recon-section-title">《廣韻》信息總覽</span>
+      <span class="recon-section-note">音韻地位 / 反切拼讀</span>
+    </div>
+  `;
+}
+
 function buildReadingHtml(detail, index, multiple) {
-  const body = `
-    <div class="tian-grid">
+  const overviewHeading = buildReadingOverviewHeadingHtml();
+  const cardsBody = `
+      <div class="tian-grid">
         <div class="phonology-card">
-          <div class="card-title">音韵地位</div>
+          <div class="card-title">音韻地位</div>
           <div class="tag-row">
             <span class="tag tag-initial" data-filter="sheng" data-value="${escapeHtml(detail.shengmu)}">
-              <span class="tag-label">声</span> ${escapeHtml(detail.shengmu)}母
+              <span class="tag-label">聲</span> ${escapeHtml(detail.shengmu)}母
             </span>
             <span class="tag tag-final" data-filter="yun" data-value="${escapeHtml(detail.yunbu)}">
-              <span class="tag-label">韵</span> ${escapeHtml(detail.yunbu)}韻
+              <span class="tag-label">韻</span> ${escapeHtml(detail.yunbu)}韻
             </span>
             <span class="tag tag-deng" data-filter="deng" data-value="${escapeHtml(detail.deng)}">
               <span class="tag-label">等</span> ${escapeHtml(detail.deng)}等
@@ -788,15 +807,15 @@ function buildReadingHtml(detail, index, multiple) {
               <span class="tag-label">呼</span> ${escapeHtml(detail.hu)}口
             </span>
             <span class="tag tag-tone" data-filter="diao" data-value="${escapeHtml(detail.shengdiao)}">
-              <span class="tag-label">调</span> ${escapeHtml(detail.shengdiao)}聲
+              <span class="tag-label">調</span> ${escapeHtml(detail.shengdiao)}聲
             </span>
             <span class="tag tag-she" data-filter="yunshe" data-value="${escapeHtml(detail.she)}">
-              <span class="tag-label">摄</span> ${escapeHtml(detail.she)}攝
+              <span class="tag-label">攝</span> ${escapeHtml(detail.she)}攝
             </span>
           </div>
         </div>
         <div class="fanqie-card">
-          <div class="card-title">反切拼读</div>
+          <div class="card-title">反切拼讀</div>
           <div class="fanqie-formula">
             <div class="fanqie-part">
               <div class="fanqie-label">反切上字</div>
@@ -824,14 +843,15 @@ function buildReadingHtml(detail, index, multiple) {
             <span class="toggle-label">盲猜模式</span>
           </div>
           <div class="blind-hint" id="blind-hint-${index}">
-            关闭开关即可查看被切字的音标和发音
+            關閉開關即可查看被切字的音標和發音
           </div>
         </div>
-    </div>
+      </div>
   `;
+  const body = `${overviewHeading}${cardsBody}`;
   const heading = multiple ? `
     <button type="button" class="reading-toggle" data-reading-index="${index}" aria-expanded="false" aria-controls="reading-body-${index}">
-      <span class="reading-index">读音 ${index + 1}</span>
+      <span class="reading-index">讀音 ${index + 1}</span>
       ${detail.fanqie ? `<span class="reading-fanqie">${escapeHtml(detail.fanqie)}切</span>` : ''}
       ${detail.definition ? `<span class="reading-definition">${escapeHtml(detail.definition)}</span>` : ''}
       <span class="reading-caret" aria-hidden="true">&#9656;</span>
@@ -839,8 +859,8 @@ function buildReadingHtml(detail, index, multiple) {
   ` : '';
   return `
     <section class="reading-block">
-      ${heading}
-      ${multiple ? `<div class="reading-body" id="reading-body-${index}" hidden>${body}</div>` : body}
+      ${multiple ? heading : body}
+      ${multiple ? `<div class="reading-body" id="reading-body-${index}" hidden>${cardsBody}</div>` : ''}
     </section>
   `;
 }
@@ -853,7 +873,7 @@ async function renderDetail(char, readings) {
 
   const list = (Array.isArray(readings) ? readings : [readings]).filter(Boolean);
   if (list.length === 0) {
-    showToast('加载详情失败');
+    showToast('加載詳情失敗');
     return;
   }
   const multiple = list.length > 1;
@@ -868,12 +888,12 @@ async function renderDetail(char, readings) {
   });
   const headerLines = [`<div class="char-display">${escapeHtml(char)}</div>`];
   if (multiple) {
-    headerLines.push(`<div class="char-readings-badge">${list.length} 个读音 / 解释</div>`);
+    headerLines.push(`<div class="char-readings-badge">${list.length} 個讀音 / 解釋</div>`);
   } else {
     if (first.fanqie) headerLines.push(`<div class="char-fanqie">${escapeHtml(first.fanqie)}切</div>`);
     if (first.definition) headerLines.push(`<div class="char-definition">${escapeHtml(first.definition)}</div>`);
   }
-  // 预加载反切上字、下字各自的 IPA
+  // 預加載反切上字、下字各自的 IPA
   const fanqieChars = new Set();
   list.forEach(d => { if (d.upper) fanqieChars.add(d.upper); if (d.lower) fanqieChars.add(d.lower); });
   await Promise.all(Array.from(fanqieChars).map(ch => getCharReadings(ch)));
@@ -882,10 +902,11 @@ async function renderDetail(char, readings) {
     if (d.lower && App.charReadings[d.lower] && App.charReadings[d.lower].length) d.lowerIpa = App.charReadings[d.lower][0].ipa;
   });
   const readingsHtml = list.map((detail, i) => buildReadingHtml(detail, i, multiple)).join('');
+  const readingsOverviewHtml = multiple ? buildReadingOverviewHeadingHtml() : '';
   const reconHtml = `
     <div class="recon-section">
       <div class="recon-section-head">
-        <span class="recon-section-title">拟音总览</span>
+        <span class="recon-section-title">擬音總覽</span>
         <span class="recon-section-note">中古音 / 上古音</span>
       </div>
       <div class="tian-grid recon-grid">
@@ -899,6 +920,7 @@ async function renderDetail(char, readings) {
     <div class="char-header">
       ${headerLines.join('\n')}
     </div>
+    ${readingsOverviewHtml}
     ${readingsHtml}
     ${reconHtml}
     <div class="action-bar">
@@ -982,7 +1004,7 @@ function bindDetailEvents(char, readings) {
   }
 }
 
-// ============ 音频播放 ============
+// ============ 音頻播放 ============
 function playAudioForChar(char, btnElement, explicitPath) {
   if (!explicitPath && !charHasAudio(char)) return;
   if (App.activeAudio) {
@@ -997,8 +1019,8 @@ function playAudioForChar(char, btnElement, explicitPath) {
   App.activeAudio = audio;
   if (btnElement) btnElement.classList.add('playing');
   audio.play().catch(err => {
-    console.warn('音频播放失败:', audioPath, err.message);
-    showToast('音频文件不存在或无法播放');
+    console.warn('音頻播放失敗:', audioPath, err.message);
+    showToast('音頻文件不存在或無法播放');
     if (btnElement) btnElement.classList.remove('playing');
   });
   audio.addEventListener('ended', () => {
@@ -1042,8 +1064,11 @@ function updateBookmarkCount() {
   const count = App.bookmarks.length;
   $('#bookmark-count').textContent = count > 0 ? `(${count})` : '(0)';
 }
-function renderBookmarkList() {
+let bookmarkRenderJob = 0;
+async function renderBookmarkList() {
   const container = $('#bookmark-list');
+  if (!container) return;
+  const renderJob = ++bookmarkRenderJob;
   const searchInput = $('#bookmark-search');
   const q = searchInput
     ? searchInput.value.trim().toLowerCase().replace(/\.mp3$/i, '')
@@ -1055,26 +1080,35 @@ function renderBookmarkList() {
   });
   if (chars.length === 0) {
     container.innerHTML = `<div class="bookmark-empty">${
-      App.bookmarks.length === 0 ? '还没有收藏任何生字' : '没有匹配的生字'
+      App.bookmarks.length === 0 ? '還沒有收藏任何生字' : '沒有匹配的生字'
     }</div>`;
     return;
   }
+
+  container.innerHTML = '<div class="bookmark-empty">正在加載生字詳情…</div>';
+  const entries = await Promise.all(chars.map(async (char) => ({
+    char,
+    detail: App.charMap[char] || await getCharDetail(char)
+  })));
+  if (renderJob !== bookmarkRenderJob) return;
+
   let html = '';
-  for (const char of chars) {
-    const detail = App.charMap[char];
-    if (!detail) continue;
+  for (const { char, detail } of entries) {
+    const safeChar = escapeHtml(char);
+    const fanqie = detail ? `${escapeHtml(detail.fanqie || '')}切` : '詳情暫不可用';
+    const ipa = detail ? `/${escapeHtml(detail.ipa || '')}/` : '/—/';
     html += `
-      <div class="bookmark-item" data-char="${char}">
-        <div class="bookmark-char">${char}</div>
+      <div class="bookmark-item" data-char="${safeChar}">
+        <div class="bookmark-char">${safeChar}</div>
         <div class="bookmark-info">
-          <div class="fanqie">${detail.fanqie}切</div>
-          <div class="ipa">/${detail.ipa}/</div>
+          <div class="fanqie">${fanqie}</div>
+          <div class="ipa">${ipa}</div>
         </div>
-        <button class="btn-remove-bookmark" data-char="${char}">&times;</button>
+        <button class="btn-remove-bookmark" data-char="${safeChar}" aria-label="從生字本移除 ${safeChar}">&times;</button>
       </div>
     `;
   }
-  container.innerHTML = html;
+  container.innerHTML = html || '<div class="bookmark-empty">沒有可顯示的生字</div>';
   container.querySelectorAll('.bookmark-item').forEach(item => {
     item.addEventListener('click', (e) => {
       if (e.target.closest('.btn-remove-bookmark')) return;
@@ -1097,7 +1131,7 @@ function renderBookmarkList() {
   });
 }
 
-// ============ 筛选面板 ============
+// ============ 篩選面板 ============
 function renderFilterChips() {
   if (!App.filterParamsApplied) {
     App.filterParamsApplied = true;
@@ -1248,9 +1282,9 @@ function buildFilterRowHtml(char) {
   const readings = App.charReadings[char] || [];
   const multiple = readings.length > 1;
   const multiBadge = multiple
-    ? `<span class="multi-badge" title="${readings.length} 个读音 / 解释">${readings.length} 音</span>`
+    ? `<span class="multi-badge" title="${readings.length} 個讀音 / 解釋">${readings.length} 音</span>`
     : '';
-  const fanqie = d.fanqie ? `${d.fanqie}切` : '加载中…';
+  const fanqie = d.fanqie ? `${d.fanqie}切` : '加載中…';
   const shengmu = d.shengmu || '…';
   const yunbu = d.yunbu || '…';
   const deng = d.deng ? `${d.deng}等` : '…';
@@ -1259,7 +1293,7 @@ function buildFilterRowHtml(char) {
   const ipa = d.ipa ? `/${d.ipa}/` : '…';
   const she = d.she ? `${d.she}攝` : '…';
   const toggleBtn = multiple
-    ? `<button type="button" class="row-toggle" title="${readings.length} 个读音，点击展开/折叠" aria-expanded="false">&#9656;</button>`
+    ? `<button type="button" class="row-toggle" title="${readings.length} 個讀音，點擊展開/摺疊" aria-expanded="false">&#9656;</button>`
     : '';
   const detailRows = multiple ? `
     <tr class="row-detail" data-char-detail="${char}" hidden>
@@ -1267,12 +1301,12 @@ function buildFilterRowHtml(char) {
         <div class="row-detail-inner">
           <table class="detail-table">
             <thead>
-              <tr><th>读音</th><th>反切</th><th>声母</th><th>韵母</th><th>等</th><th>呼</th><th>声调</th><th>IPA</th><th>韵摄</th><th>释义</th></tr>
+              <tr><th>讀音</th><th>反切</th><th>聲母</th><th>韻母</th><th>等</th><th>呼</th><th>聲調</th><th>IPA</th><th>韻攝</th><th>釋義</th></tr>
             </thead>
             <tbody>
               ${readings.map((r, i) => `
                 <tr>
-                  <td>读音 ${i + 1}</td>
+                  <td>讀音 ${i + 1}</td>
                   <td>${escapeHtml((r.fanqie || '') + '切')}</td>
                   <td>${escapeHtml(r.shengmu || '…')}</td>
                   <td>${escapeHtml((r.yunbu || '…') + '韻')}</td>
@@ -1304,7 +1338,7 @@ function buildFilterRowHtml(char) {
       <td class="col-audio">
         ${charHasAudio(char)
           ? `<button class="btn-table-audio" data-char="${char}" title="播放">&#9654;</button>`
-          : `<button class="btn-table-audio btn-no-audio" disabled title="暂无音频">&#9654;</button>`}
+          : `<button class="btn-table-audio btn-no-audio" disabled title="暫無音頻">&#9654;</button>`}
       </td>
     </tr>
     ${detailRows}
@@ -1382,7 +1416,7 @@ function appendFilterSentinel() {
   removeFilterSentinel();
   const tr = document.createElement('tr');
   tr.id = 'filter-sentinel';
-  tr.innerHTML = '<td colspan="10" style="text-align:center;padding:16px;color:var(--color-text-muted);">加载中…</td>';
+  tr.innerHTML = '<td colspan="10" style="text-align:center;padding:16px;color:var(--color-text-muted);">加載中…</td>';
   tbody.appendChild(tr);
 
   if (App.filterObserver) {
@@ -1429,7 +1463,7 @@ async function ensureFanqieIndex() {
   if (App.fanqieShangqie && App.fanqieXiaqie) return;
   const text = await fetchText('data/fanqieindex.txt');
   const lines = text.split(/\r?\n/).filter(line => line.trim() !== '');
-  if (lines.length < 2) throw new Error('fanqieindex 格式错误，需2行');
+  if (lines.length < 2) throw new Error('fanqieindex 格式錯誤，需2行');
   App.filterIndex.shangqie = Array.from(lines[0].trim()).filter(ch => ch !== '0');
   App.filterIndex.xiaqie = Array.from(lines[1].trim()).filter(ch => ch !== '0');
   App.fanqieShangqie = new Set(App.filterIndex.shangqie);
@@ -1443,7 +1477,7 @@ async function loadFanqieCharList(side, chars) {
     fetchText(`data/fanqie/${side}/${getHexFromChar(ch)}.txt`)
       .then(parseCharListText)
       .catch(e => {
-        console.warn(`读取反切索引文件失败: ${side} / ${ch}`, e);
+        console.warn(`讀取反切索引文件失敗: ${side} / ${ch}`, e);
         return [];
       })
   ));
@@ -1458,7 +1492,7 @@ async function loadFanqieCandidates(shangChars, xiaChars) {
   try {
     await ensureFanqieIndex();
   } catch (e) {
-    console.warn('读取反切索引失败: data/fanqieindex.txt', e);
+    console.warn('讀取反切索引失敗: data/fanqieindex.txt', e);
     return null;
   }
   if (shangChars.some(ch => !App.fanqieShangqie.has(ch)) ||
@@ -1478,7 +1512,7 @@ async function startFanqieSearch() {
   const shangChars = App.filters.shangqie || [];
   const xiaChars = App.filters.xiaqie || [];
   if (!shangChars.length && !xiaChars.length) {
-    showToast('请至少选择一个上切或下切');
+    showToast('請至少選擇一個上切或下切');
     return;
   }
   const fanqie = (shangChars[0] || '') + (xiaChars[0] || '');
@@ -1507,20 +1541,20 @@ async function startFanqieSearch() {
     const chars = await loadFanqieCandidates(shangChars, xiaChars);
     if (jobId !== App.fanqieJobId) return;
     if (chars === null) {
-      if (tbody) tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">未找到反切索引，无法搜索</td></tr>`;
-      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 条结果';
+      if (tbody) tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">未找到反切索引，無法搜索</td></tr>`;
+      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 條結果';
       return;
     }
     if (chars.length === 0) {
-      if (tbody) tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">没有符合条件的结果</td></tr>`;
-      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 条结果';
+      if (tbody) tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">沒有符合條件的結果</td></tr>`;
+      if (countEl) countEl.innerHTML = '共 <strong>0</strong> 條結果';
       return;
     }
     App.fanqieQueue = chars;
     await loadMoreFanqieRows();
   } catch (e) {
-    console.error('反切搜索失败:', e);
-    showToast('反切搜索失败: ' + e.message);
+    console.error('反切搜索失敗:', e);
+    showToast('反切搜索失敗: ' + e.message);
   }
 }
 
@@ -1599,8 +1633,8 @@ function renderNewFanqieRows() {
   }
   const countEl = $('#result-count');
   if (countEl) {
-    countEl.innerHTML = `已确认 <strong>${App.fanqieResults.length}</strong> 条${
-      hasMoreFanqieRaw() ? '（继续加载中…）' : ''
+    countEl.innerHTML = `已確認 <strong>${App.fanqieResults.length}</strong> 條${
+      hasMoreFanqieRaw() ? '（繼續加載中…）' : ''
     }`;
   }
 }
@@ -1628,7 +1662,7 @@ function appendFanqieSentinel() {
   removeFanqieSentinel();
   const tr = document.createElement('tr');
   tr.id = 'fanqie-sentinel';
-  tr.innerHTML = '<td colspan="10" style="text-align:center;padding:16px;color:var(--color-text-muted);">加载中…</td>';
+  tr.innerHTML = '<td colspan="10" style="text-align:center;padding:16px;color:var(--color-text-muted);">加載中…</td>';
   tbody.appendChild(tr);
   if ('IntersectionObserver' in window) {
     App.fanqieObserver = new IntersectionObserver(entries => {
@@ -1651,10 +1685,10 @@ async function loadMoreFanqieRows() {
     if (!hasMoreFanqieRaw()) {
       const tbody = $('#table-body');
       if (tbody && App.fanqieResults.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">没有符合条件的结果</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" style="text-align:center;padding:var(--space-2xl);color:var(--color-text-muted);">沒有符合條件的結果</td></tr>`;
       }
       const countEl = $('#result-count');
-      if (countEl && App.fanqieResults.length === 0) countEl.innerHTML = '共 <strong>0</strong> 条结果';
+      if (countEl && App.fanqieResults.length === 0) countEl.innerHTML = '共 <strong>0</strong> 條結果';
       finishFanqieRows();
     }
     return;
@@ -1673,7 +1707,7 @@ async function loadMoreFanqieRows() {
   }
 }
 
-// ============ 批量播放、导出、复制 ============
+// ============ 批量播放、導出、複製 ============
 function initBrowserActions() {
   const batchBtn = $('#btn-batch-play');
   const exportBtn = $('#btn-export-csv');
@@ -1693,7 +1727,7 @@ function toggleBatchPlay() {
 }
 function startBatchPlay() {
   const rows = $$('#table-body tr[data-char]');
-  if (rows.length === 0) { showToast('没有可播放的数据'); return; }
+  if (rows.length === 0) { showToast('沒有可播放的數據'); return; }
   const btn = $('#btn-batch-play');
   btn.innerHTML = '&#9632; 停止播放';
   btn.classList.add('primary');
@@ -1744,7 +1778,7 @@ function stopBatchPlay() {
   App.batchIndex = 0;
   const btn = $('#btn-batch-play');
   if (!btn) return;
-  btn.innerHTML = '&#9654; 顺序播放';
+  btn.innerHTML = '&#9654; 順序播放';
   btn.classList.remove('primary');
   $$('#table-body tr').forEach(r => r.style.background = '');
   $$('.btn-table-audio.playing').forEach(b => b.classList.remove('playing'));
@@ -1752,8 +1786,8 @@ function stopBatchPlay() {
 
 function exportCSV() {
   const rows = $$('#table-body tr[data-char]');
-  if (rows.length === 0) { showToast('没有可导出的数据'); return; }
-  let csv = '\uFEFF字头,反切,声母,韵母,等,呼,声调,IPA,韵摄\n';
+  if (rows.length === 0) { showToast('沒有可導出的數據'); return; }
+  let csv = '\uFEFF字頭,反切,聲母,韻母,等,呼,聲調,IPA,韻攝\n';
   rows.forEach(row => {
     const char = row.dataset.char;
     const d = App.charMap[char];
@@ -1764,24 +1798,24 @@ function exportCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = '音韵数据导出.csv';
+  a.download = '音韻數據導出.csv';
   a.click();
   URL.revokeObjectURL(url);
-  showToast('导出成功');
+  showToast('導出成功');
 }
 
 function copyTable() {
   const rows = $$('#table-body tr[data-char]');
-  if (rows.length === 0) { showToast('没有可复制的数据'); return; }
-  let text = '字头\t反切\t声母\t韵母\t等\t呼\t声调\tIPA\t韵摄\n';
+  if (rows.length === 0) { showToast('沒有可複製的數據'); return; }
+  let text = '字頭\t反切\t聲母\t韻母\t等\t呼\t聲調\tIPA\t韻攝\n';
   rows.forEach(row => {
     const char = row.dataset.char;
     const d = App.charMap[char];
     if (!d) return;
     text += `${d.char}\t${d.fanqie}\t${d.shengmu}\t${d.yunbu}\t${d.deng}\t${d.hu}\t${d.shengdiao}\t${d.ipa}\t${d.she}\n`;
   });
-  navigator.clipboard.writeText(text).then(() => showToast('已复制到剪贴板'))
-    .catch(() => showToast('复制失败，请尝试导出CSV'));
+  navigator.clipboard.writeText(text).then(() => showToast('已複製到剪貼板'))
+    .catch(() => showToast('複製失敗，請嘗試導出CSV'));
 }
 
 // ============ 初始化 ============
@@ -1799,7 +1833,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initFilterGroupToggles();
   if ($('#chips-initial') || $('#chips-shangqie')) renderFilterChips();
   applyFanqieUrlQuery();
-  // 默认显示浏览器时，应用一次筛选（无筛选时显示所有字）
+  // 默認顯示瀏覽器時，應用一次篩選（無篩選時顯示所有字）
   if (App.currentView === 'browser') {
     applyFilters();
   }

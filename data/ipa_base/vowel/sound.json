@@ -1,0 +1,299 @@
+[
+  {
+    "form": "vowel",
+    "symbol": "i",
+    "slug": "close-front-unrounded",
+    "height": "close",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/i.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "y",
+    "slug": "close-front-rounded",
+    "height": "close",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/y.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɨ",
+    "slug": "close-central-unrounded",
+    "height": "close",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ɨ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ʉ",
+    "slug": "close-central-rounded",
+    "height": "close",
+    "backness": "central",
+    "roundedness": "rounded",
+    "audio": "audio/ʉ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɯ",
+    "slug": "close-back-unrounded",
+    "height": "close",
+    "backness": "back",
+    "roundedness": "unrounded",
+    "audio": "audio/ɯ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "u",
+    "slug": "close-back-rounded",
+    "height": "close",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/u.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɪ",
+    "slug": "near-close-front-unrounded",
+    "height": "near-close",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/ɪ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ʏ",
+    "slug": "near-close-front-rounded",
+    "height": "near-close",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/ʏ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ʊ",
+    "slug": "near-close-back-rounded",
+    "height": "near-close",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/ʊ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "e",
+    "slug": "close-mid-front-unrounded",
+    "height": "close-mid",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/e.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ø",
+    "slug": "close-mid-front-rounded",
+    "height": "close-mid",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/ø.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɘ",
+    "slug": "close-mid-central-unrounded",
+    "height": "close-mid",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ɘ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɵ",
+    "slug": "close-mid-central-rounded",
+    "height": "close-mid",
+    "backness": "central",
+    "roundedness": "rounded",
+    "audio": "audio/ɵ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɤ",
+    "slug": "close-mid-back-unrounded",
+    "height": "close-mid",
+    "backness": "back",
+    "roundedness": "unrounded",
+    "audio": "audio/ɤ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "o",
+    "slug": "close-mid-back-rounded",
+    "height": "close-mid",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/o.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "e̞",
+    "slug": "mid-front-unrounded",
+    "height": "mid",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/e̞.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ø̞",
+    "slug": "mid-front-rounded",
+    "height": "mid",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/ø̞.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ə",
+    "slug": "mid-central-unrounded",
+    "height": "mid",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ə.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɤ̞",
+    "slug": "mid-back-unrounded",
+    "height": "mid",
+    "backness": "back",
+    "roundedness": "unrounded",
+    "audio": "audio/ɤ̞.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "o̞",
+    "slug": "mid-back-rounded",
+    "height": "mid",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/o̞.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɛ",
+    "slug": "open-mid-front-unrounded",
+    "height": "open-mid",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/ɛ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "œ",
+    "slug": "open-mid-front-rounded",
+    "height": "open-mid",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/œ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɜ",
+    "slug": "open-mid-central-unrounded",
+    "height": "open-mid",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ɜ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɞ",
+    "slug": "open-mid-central-rounded",
+    "height": "open-mid",
+    "backness": "central",
+    "roundedness": "rounded",
+    "audio": "audio/ɞ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ʌ",
+    "slug": "open-mid-back-unrounded",
+    "height": "open-mid",
+    "backness": "back",
+    "roundedness": "unrounded",
+    "audio": "audio/ʌ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɔ",
+    "slug": "open-mid-back-rounded",
+    "height": "open-mid",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/ɔ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "æ",
+    "slug": "near-open-front-unrounded",
+    "height": "near-open",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/æ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɐ",
+    "slug": "near-open-central-unrounded",
+    "height": "near-open",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ɐ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "a",
+    "slug": "open-front-unrounded",
+    "height": "open",
+    "backness": "front",
+    "roundedness": "unrounded",
+    "audio": "audio/a.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɶ",
+    "slug": "open-front-rounded",
+    "height": "open",
+    "backness": "front",
+    "roundedness": "rounded",
+    "audio": "audio/ɶ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ä",
+    "slug": "open-central-unrounded",
+    "height": "open",
+    "backness": "central",
+    "roundedness": "unrounded",
+    "audio": "audio/ä.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɑ",
+    "slug": "open-back-unrounded",
+    "height": "open",
+    "backness": "back",
+    "roundedness": "unrounded",
+    "audio": "audio/ɑ.mp3"
+  },
+  {
+    "form": "vowel",
+    "symbol": "ɒ",
+    "slug": "open-back-rounded",
+    "height": "open",
+    "backness": "back",
+    "roundedness": "rounded",
+    "audio": "audio/ɒ.mp3"
+  }
+]

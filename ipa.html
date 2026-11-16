@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="基於 Excel 音標表構建的國際音標 IPA 元音與輔音座標訓練器。"
+    />
+    <title>音位 · IPA 學習訓練器</title>
+    <!-- 本地資源優先；如需 CDN，將 href 改爲對應 CDN 地址即可。 -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./ipa.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="音位 IPA 學習訓練器首頁">
+          <span class="brand-mark" aria-hidden="true">IPA</span>
+          <span class="brand-copy">
+            <strong>音位</strong>
+            <small>PHONETIC LAB</small>
+          </span>
+        </a>
+
+        <div class="topbar-center">
+          <nav class="global-nav" aria-label="項目導航">
+            <a class="nav-tab" href="./detail.html">&#128270; 音韻詳情</a>
+            <a class="nav-tab" href="./fanqie.html">&#128269; 反切搜索</a>
+            <a class="nav-tab" href="./filter.html">&#128202; 韻書瀏覽器</a>
+            <a class="nav-tab active" href="./ipa.html">&#128488; IPA發音訓練</a>
+          </nav>
+        </div>
+
+        <div class="top-actions">
+          <nav class="mode-switch" aria-label="訓練類型" role="tablist">
+            <button
+              class="mode-button is-active"
+              id="mode-vowels"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-mode="vowels"
+            >
+              <i data-lucide="circle-dot" aria-hidden="true"></i>
+              <span>元音</span>
+            </button>
+            <button
+              class="mode-button"
+              id="mode-consonants"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-mode="consonants"
+            >
+              <i data-lucide="layers-3" aria-hidden="true"></i>
+              <span>輔音</span>
+            </button>
+          </nav>
+          <button
+            class="button button-quiet star-library-button"
+            id="open-starred"
+            type="button"
+            aria-label="打開星標集"
+            title="打開星標集"
+          >
+            <i data-lucide="star" aria-hidden="true"></i>
+            <span class="star-library-label">星標集</span>
+            <span class="star-count" id="star-count">0</span>
+          </button>
+          <button
+            class="button button-quiet table-trigger"
+            id="open-tables"
+            type="button"
+            aria-label="查看音標表"
+            title="查看音標表"
+          >
+            <i data-lucide="table-2" aria-hidden="true"></i>
+            <span>查看音標表</span>
+          </button>
+          <a class="button button-quiet resources-button" href="./resources.html">
+            <i data-lucide="book-open" aria-hidden="true"></i>
+            <span>數據來源</span>
+          </a>
+          <button
+            class="button button-quiet settings-button"
+            id="open-settings"
+            type="button"
+            aria-label="打開設置"
+            title="設置"
+          >
+            <i data-lucide="settings" aria-hidden="true"></i>
+            <span>設置</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="session-head" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow" id="mode-eyebrow">VOWEL COORDINATES · 元音座標</p>
+            <h1 id="page-title">元音座標訓練</h1>
+            <p class="page-subtitle" id="page-subtitle">
+              從元音表中隨機抽取，判斷它的發音位置、圓展脣與音調高低。
+            </p>
+          </div>
+
+          <div class="session-head-side">
+            <div class="session-tools">
+              <button
+                class="button button-test"
+                id="self-test-toggle"
+                type="button"
+                aria-label="開始自測"
+                title="開始自測"
+              >
+                <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                <span class="test-label" id="self-test-toggle-label">開始自測</span>
+              </button>
+              <button
+                class="button button-quiet"
+                id="shuffle-question"
+                type="button"
+                aria-label="換一題"
+                title="換一題"
+              >
+                <i data-lucide="shuffle" aria-hidden="true"></i>
+                <span class="shuffle-label">換一題</span>
+              </button>
+            </div>
+            <div class="session-stats" id="session-stats" aria-label="自測進度" hidden>
+              <div class="stat stat-test-progress">
+                <span>已答</span>
+                <strong id="stat-answered">0 / 10</strong>
+              </div>
+              <button class="button button-quiet exit-test-button" id="exit-test" type="button">
+                退出自測
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="workspace" id="workspace">
+          <section class="prompt-panel" aria-labelledby="prompt-heading">
+            <div class="prompt-topline">
+              <span class="panel-kicker" id="prompt-kicker">元音表 · 隨機取樣</span>
+              <div class="prompt-meta-actions">
+                <button
+                  class="star-current-button"
+                  id="star-current"
+                  type="button"
+                  aria-pressed="false"
+                  aria-label="將當前音標加入星標"
+                  title="將當前音標加入星標"
+                >
+                  <i data-lucide="star" aria-hidden="true"></i>
+                  <span id="star-current-label">星標</span>
+                </button>
+                <span class="round-label" id="round-label">01</span>
+              </div>
+            </div>
+
+            <div class="glyph-stage">
+              <span class="coordinate-grid" aria-hidden="true"></span>
+              <div class="glyph-copy">
+                <p class="glyph-label" id="glyph-label">INTERNATIONAL PHONETIC ALPHABET</p>
+                <div class="ipa-glyph" id="ipa-glyph" aria-live="polite">i</div>
+                <button
+                  class="pronunciation-button"
+                  id="pronunciation-button"
+                  type="button"
+                  aria-label="播放當前音標發音"
+                  title="播放當前音標發音"
+                >
+                  <i data-lucide="volume-2" aria-hidden="true"></i>
+                  <span id="pronunciation-label">播放發音</span>
+                </button>
+                <span class="visually-hidden" id="pronunciation-status" aria-live="polite"></span>
+                <p class="prompt-question" id="prompt-heading">
+                  這個音標屬於哪一組發音座標？
+                </p>
+              </div>
+              <div class="glyph-axis glyph-axis-top" aria-hidden="true">HIGH</div>
+              <div class="glyph-axis glyph-axis-bottom" aria-hidden="true">LOW</div>
+            </div>
+
+            <div class="prompt-footer">
+              <span id="source-cell">元音表 · B3</span>
+              <span class="prompt-footer-rule" aria-hidden="true"></span>
+              <span id="question-progress">第 1 題</span>
+            </div>
+          </section>
+
+          <section class="answer-panel" aria-labelledby="answer-title">
+            <div class="answer-heading">
+              <div>
+                <p class="eyebrow">ANSWER MAP</p>
+                <h2 id="answer-title">選擇發音座標</h2>
+              </div>
+              <span class="answer-progress" id="answer-progress">0 / 3</span>
+            </div>
+
+            <form id="choice-form" novalidate>
+              <div class="choice-section" data-field="position" id="section-position">
+                <div class="choice-title-row">
+                  <span class="step-index">01</span>
+                  <div class="choice-title-copy">
+                    <h3 id="field-position-title">發音位置</h3>
+                    <p id="field-position-hint">前 / 央 / 後</p>
+                  </div>
+                  <span class="section-status" id="status-position" aria-label="尚未判斷"></span>
+                </div>
+                <div class="option-grid" id="options-position" role="group" aria-labelledby="field-position-title"></div>
+              </div>
+
+              <div class="choice-section" data-field="lipShape" id="section-lipShape">
+                <div class="choice-title-row">
+                  <span class="step-index">02</span>
+                  <div class="choice-title-copy">
+                    <h3 id="field-lipShape-title">圓展脣</h3>
+                    <p id="field-lipShape-hint">展脣 / 圓脣</p>
+                  </div>
+                  <span class="section-status" id="status-lipShape" aria-label="尚未判斷"></span>
+                </div>
+                <div class="option-grid" id="options-lipShape" role="group" aria-labelledby="field-lipShape-title"></div>
+              </div>
+
+              <div class="choice-section" data-field="height" id="section-height">
+                <div class="choice-title-row">
+                  <span class="step-index">03</span>
+                  <div class="choice-title-copy">
+                    <h3 id="field-height-title">音調高低</h3>
+                    <p id="field-height-hint">高 / 半高 / 中 / 半低 / 低</p>
+                  </div>
+                  <span class="section-status" id="status-height" aria-label="尚未判斷"></span>
+                </div>
+                <div class="option-grid option-grid-wide" id="options-height" role="group" aria-labelledby="field-height-title"></div>
+              </div>
+            </form>
+
+            <div class="answer-note" id="answer-note" aria-live="polite">
+              先選擇發音位置。
+            </div>
+            <div class="test-actions" id="test-actions" hidden>
+              <span class="test-action-copy">本題已記錄</span>
+              <button class="button button-primary" id="test-next" type="button">
+                <span>下一題</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <section class="feedback-panel" id="feedback" aria-live="polite" hidden>
+          <div class="feedback-icon" id="feedback-icon" aria-hidden="true"></div>
+          <div class="feedback-copy">
+            <p class="feedback-kicker" id="feedback-kicker">判斷完成</p>
+            <h2 id="feedback-title">回答正確</h2>
+            <p id="feedback-summary"></p>
+            <div class="feedback-details" id="feedback-details"></div>
+          </div>
+          <button class="button button-primary next-button" id="next-question" type="button">
+            <span>下一題</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </button>
+        </section>
+
+        <section class="test-result" id="test-result" aria-labelledby="test-result-title" hidden>
+          <div class="test-result-copy">
+            <p class="eyebrow" id="test-result-kicker">SELF TEST · 元音自測</p>
+            <h2 id="test-result-title">自測完成</h2>
+            <p>本輪 10 題的判斷已經全部記錄。</p>
+          </div>
+
+          <div class="test-result-score">
+            <span>正確率</span>
+            <strong id="test-result-accuracy">—</strong>
+          </div>
+
+          <div class="test-result-breakdown">
+            <div>
+              <span>答對</span>
+              <strong id="test-result-correct">0</strong>
+            </div>
+            <div>
+              <span>答錯</span>
+              <strong id="test-result-wrong">0</strong>
+            </div>
+            <div>
+              <span>總題數</span>
+              <strong id="test-result-total">10</strong>
+            </div>
+          </div>
+
+          <div class="test-result-actions">
+            <button
+              class="button button-quiet star-result-button"
+              id="star-result"
+              type="button"
+              aria-pressed="false"
+              aria-label="將本題音標加入星標"
+            >
+              <i data-lucide="star" aria-hidden="true"></i>
+              <span id="star-result-label">星標本題</span>
+            </button>
+            <button class="button button-primary" id="retry-test" type="button">
+              <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+              <span>再測一次</span>
+            </button>
+            <button class="button button-quiet" id="back-to-training" type="button">
+              返回訓練
+            </button>
+          </div>
+        </section>
+
+        <footer class="app-footer" style="text-align: center;">
+          <div>音韻學學習工具 v2.0 &#8226; 古音數字化研習平臺 &#8226; <a href="./resources.html" style="color: inherit;">本網站數據來源</a></div>
+          <div>聲明：本站不擁有上述詞典的版權，相關數據僅供個人學習與學術研究參考，請勿用於商業用途。</div>
+          <div>作者：zigui111 &#8226; <img src="/imgs/github.png" style="vertical-align: middle;height: 15px;"> github：<a href="https://github.com/zigui111/linggu" target="_blank" style="text-decoration: none;color: inherit;font-weight: inherit;">https://github.com/zigui111/linggu</a></div>
+          <div class="filing-links">
+            <span class="filing-item" id="icp-record">京ICP備2023021416號</span>
+            <span class="filing-item" id="gongan-record">京公網安備 11010902000981號</span>
+          </div>
+        </footer>
+      </main>
+
+      <div class="settings-panel" id="settings-panel">
+        <div class="settings-header">
+          <div class="settings-title">&#9881; 設置</div>
+          <button class="btn-close" id="close-settings" type="button" aria-label="關閉設置">&times;</button>
+        </div>
+        <div class="settings-section">
+          <div class="settings-row">
+            <div class="settings-info">
+              <div class="settings-label">IPA 數據緩存</div>
+              <div class="settings-desc">開啓後，訓練頁會保留本地緩存設置，並在支持的瀏覽器中複用 IPA 音頻資源。</div>
+            </div>
+            <label class="switch" title="是否允許 IPA 數據緩存">
+              <input type="checkbox" id="ipa-cache-toggle" />
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="table-dialog" id="table-dialog" aria-labelledby="table-dialog-title">
+      <div class="dialog-shell">
+        <header class="dialog-head">
+          <div>
+            <p class="eyebrow">SOURCE TABLES · 原始表</p>
+            <h2 id="table-dialog-title">國際音標表</h2>
+          </div>
+          <button
+            class="icon-button"
+            id="close-tables"
+            type="button"
+            aria-label="關閉音標表"
+          >
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </header>
+
+        <div class="table-toolbar">
+          <div class="table-tabs" role="tablist" aria-label="音標表類型">
+            <button
+              class="table-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-table="vowels"
+            >
+              元音表
+            </button>
+            <button
+              class="table-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-table="consonants"
+            >
+              輔音表
+            </button>
+          </div>
+          <span class="table-meta" id="table-meta"></span>
+        </div>
+
+        <div class="table-viewport" id="table-content" tabindex="0"></div>
+        <span class="visually-hidden" id="table-audio-status" aria-live="polite"></span>
+
+        <footer class="dialog-foot">
+          <a href="./data/ipa/IPA列表【元音+辅音】.xlsx" download>IPA列表【元音+輔音】.xlsx</a>
+          <span>表格內容按工作表座標讀取</span>
+        </footer>
+      </div>
+    </dialog>
+
+    <dialog class="star-dialog" id="star-dialog" aria-labelledby="star-dialog-title">
+      <div class="star-dialog-shell">
+        <header class="dialog-head">
+          <div>
+            <p class="eyebrow">STARRED IPA · 星標集</p>
+            <h2 id="star-dialog-title">星標音標</h2>
+          </div>
+          <button
+            class="icon-button"
+            id="close-starred"
+            type="button"
+            aria-label="關閉星標集"
+          >
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </header>
+
+        <div class="table-toolbar star-toolbar">
+          <div class="table-tabs" role="tablist" aria-label="篩選星標音標">
+            <button
+              class="table-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-star-filter="all"
+            >
+              全部
+            </button>
+            <button
+              class="table-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-star-filter="vowels"
+            >
+              元音
+            </button>
+            <button
+              class="table-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-star-filter="consonants"
+            >
+              輔音
+            </button>
+          </div>
+          <span class="table-meta" id="star-dialog-meta">0 個星標</span>
+        </div>
+
+        <div class="starred-viewport" id="starred-content" tabindex="0"></div>
+
+        <footer class="dialog-foot">
+          <span>星標保存在當前瀏覽器</span>
+          <span>選擇“練習”可單獨複習該音標</span>
+        </footer>
+      </div>
+    </dialog>
+
+    <!-- 本地 lucide；如需 CDN，將 src 改爲 unpkg/jsdelivr 的 UMD 地址。 -->
+    <script src="./data/ipa/assets/lucide.min.js"></script>
+    <script src="./data/ipa/audio-map.js"></script>
+    <script src="./data/ipa/data.js"></script>
+    <script src="./ipa.js"></script>
+  </body>
+</html>
